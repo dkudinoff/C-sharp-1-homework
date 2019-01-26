@@ -10,8 +10,9 @@ namespace _5_б_
     {
         static void Main(string[] args)
         {
-            Console.SetCursorPosition(Console.WindowWidth / 2, Console.WindowHeight / 2);
-            Console.WriteLine("Даниил Кудинов Санкт-Петербург");
+            string s = "Даниил Кудинов Санкт-Петербург";
+            Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.WindowHeight / 2);
+            Console.WriteLine(s);
             Console.ReadLine();
         }
     }
