@@ -6,17 +6,36 @@ using System.Threading.Tasks;
 
 namespace _3
 {
+    /// <summary>
+    /// Кудинов Даниил
+    /// 
+    /// *Описать класс дробей — рациональных чисел, являющихся отношением двух целых чисел. 
+    /// Предусмотреть методы сложения, вычитания, умножения и деления дробей. 
+    /// Написать программу, демонстрирующую все разработанные элементы класса.
+    /// ** Добавить проверку, чтобы знаменатель не равнялся 0.
+    ///    Выбрасывать исключение ArgumentException("Знаменатель не может быть равен 0");
+    /// *** Добавить упрощение дробей.
+    /// </summary>
 
+    ///Класс дробей
     class Fraction
     {
         int num, denom;
 
+        /// <summary>
+        /// Конструктор создания пустой дроби
+        /// </summary>
         public Fraction()
         {
             num = 0;
             denom = 0;
         }
 
+        /// <summary>
+        /// Конструктор создания дроби с заданным числителем и знаменателем
+        /// </summary>
+        /// <param name="num">числитель</param>
+        /// <param name="denom">знаменатель</param>
         public Fraction(int num, int denom)
         {
             if (denom == 0)
@@ -26,14 +45,18 @@ namespace _3
 
             this.num = num;
             this.denom = denom;
-
+            ///избавление от лишних минусов 
             if (this.denom<0)
             {
-                this.denom = Math.Abs(this.denom);
+                this.denom *= -1;
                 this.num *= -1;
             }
         }
-
+        /// <summary>
+        /// Метод суммы дробей
+        /// </summary>
+        /// <param name="x2">второе слагаемое (дробь)</param>
+        /// <returns>сумма (дробь)</returns>
         public Fraction Sum(Fraction x2)
         {
             Fraction x3 = new Fraction();
@@ -45,7 +68,11 @@ namespace _3
             Simplif(x3);
             return x3;
         }
-
+        /// <summary>
+        /// Метод вычитания дробей
+        /// </summary>
+        /// <param name="x2">вычитаемое (дробь)</param>
+        /// <returns>разность (дробь)</returns>
         public Fraction Diff(Fraction x2)
         {
             Fraction x3 = new Fraction();
@@ -57,7 +84,11 @@ namespace _3
             Simplif(x3);
             return x3;
         }
-
+        /// <summary>
+        /// Метод умножения дробей
+        /// </summary>
+        /// <param name="x2">второй множитель (дробь)</param>
+        /// <returns>произведение (дробь)</returns>
         public Fraction Multi(Fraction x2)
         {
             Fraction x3 = new Fraction();
@@ -66,7 +97,11 @@ namespace _3
             Simplif(x3);
             return x3;
         }
-
+        /// <summary>
+        /// Метод деления дробей
+        /// </summary>
+        /// <param name="x2">делитель (дробь)</param>
+        /// <returns>частное (дробь)</returns>
         public Fraction Div(Fraction x2)
         {
             Fraction x3 = new Fraction();
@@ -75,9 +110,13 @@ namespace _3
             Simplif(x3);
             return x3;
         }
-
-
-
+        /// <summary>
+        /// Метод нахождения наибольшего общего делителя (НОД)
+        /// Необходим для упрощения дробей.
+        /// </summary>
+        /// <param name="N1">первое число</param>
+        /// <param name="N2">второе число</param>
+        /// <returns></returns>
         static public int NOD(int N1, int N2)
         {
             int Nmin = N1 < N2 ? Math.Abs(N1) : Math.Abs(N2);
@@ -102,7 +141,11 @@ namespace _3
             }
             return nod;
         }
-
+        /// <summary>
+        /// Метод упрощения финальной дроби
+        /// </summary>
+        /// <param name="x3">упрощенная дробь</param>
+        /// <returns></returns>
         public Fraction Simplif(Fraction x3)
         {
             int nod = NOD(x3.num, x3.denom);
@@ -110,8 +153,10 @@ namespace _3
             x3.denom /= nod;
             return x3;
         }
-
-
+        /// <summary>
+        /// Метод представления дроби в виде строки
+        /// </summary>
+        /// <returns></returns>
         public string ToString()
         {            
             return num + "/" + denom;
