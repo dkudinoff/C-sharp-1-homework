@@ -1,0 +1,7 @@
+E:\Projects\C-sharp-1-homework\Homework_Lesson_3\№1 б\bin\Debug\№1 б.exe.config
+E:\Projects\C-sharp-1-homework\Homework_Lesson_3\№1 б\bin\Debug\№1 б.exe
+E:\Projects\C-sharp-1-homework\Homework_Lesson_3\№1 б\bin\Debug\№1 б.pdb
+E:\Projects\C-sharp-1-homework\Homework_Lesson_3\№1 б\obj\Debug\№1 б.csproj.CoreCompileInputs.cache
+E:\Projects\C-sharp-1-homework\Homework_Lesson_3\№1 б\obj\Debug\№1 б.exe
+E:\Projects\C-sharp-1-homework\Homework_Lesson_3\№1 б\obj\Debug\№1 б.pdb
+E:\Projects\C-sharp-1-homework\Homework_Lesson_3\№1 б\obj\Debug\№1 б.csprojAssemblyReference.cache
