@@ -36,11 +36,12 @@
             this.lblTryNum = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTarget = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnCommand1
             // 
-            this.BtnCommand1.Location = new System.Drawing.Point(187, 28);
+            this.BtnCommand1.Location = new System.Drawing.Point(187, 12);
             this.BtnCommand1.Name = "BtnCommand1";
             this.BtnCommand1.Size = new System.Drawing.Size(75, 23);
             this.BtnCommand1.TabIndex = 0;
@@ -50,7 +51,7 @@
             // 
             // BtnCommand2
             // 
-            this.BtnCommand2.Location = new System.Drawing.Point(187, 61);
+            this.BtnCommand2.Location = new System.Drawing.Point(187, 41);
             this.BtnCommand2.Name = "BtnCommand2";
             this.BtnCommand2.Size = new System.Drawing.Size(75, 23);
             this.BtnCommand2.TabIndex = 1;
@@ -114,11 +115,22 @@
             this.lblTarget.TabIndex = 7;
             this.lblTarget.Text = "0";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(187, 83);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 8;
+            this.btnBack.Text = "button1";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(280, 146);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTarget);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTryNum);
@@ -144,6 +156,7 @@
         private System.Windows.Forms.Label lblTryNum;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTarget;
+        private System.Windows.Forms.Button btnBack;
     }
 }
 
